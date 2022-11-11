@@ -9,9 +9,9 @@ public class Main {
         while (true) {
             if (!queue.isEmpty()) {
                 Person person = queue.poll();
-                System.out.println(person.name + " " + person.surname + " прокатился(лась) на аттракционе");
-                person.numOfTickets--;
-                if (!(person.numOfTickets == 0)) {
+                System.out.println(person.getName() + " " + person.getSurname() + " прокатился(лась) на аттракционе");
+                person.spendTicket();
+                if (person.getNumOfTickets() != 0) {
                     queue.add(person);
                 }
             } else {
